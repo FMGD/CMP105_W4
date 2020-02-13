@@ -3,6 +3,10 @@
 #include <SFML/Graphics.hpp>
 #include "Framework/Input.h"
 #include "Framework/GameObject.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "Cursor.h"
+#include "Background.h"
 #include <string.h>
 #include <iostream>
 
@@ -27,6 +31,20 @@ private:
 
 	// Level objects
 	GameObject testSprite;
-	sf::Texture texture;
+
+	sf::Texture playerTexture;
+	sf::Texture enemyTexture;
+	sf::Texture cursorTexture;
+	sf::Texture backgroundTexture;
+
+	Background backgroundObject;
+
+	Player playerObject;
+	Enemy enemyObject;
+	Enemy enemyObject2;
+
+	Cursor cursorObject;
+
+	std::vector<GameObject*> gameObjects;
 
 };
